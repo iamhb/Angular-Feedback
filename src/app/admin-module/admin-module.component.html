@@ -1,0 +1,38 @@
+ 
+<div style="text-align:center">
+  <h1>
+    Hello Admin! 
+    <br>
+  </h1>
+
+  <h3>
+  In app-main-component
+	</h3>
+
+<p *ngIf= !depFlag>
+	Select your department
+</p>
+ <select [(ngModel)]= "dep" class="form-group"(click)="doPrint()" >
+	  <option value="IT">IT</option>
+	  <option value="ECE">ECE</option>
+	  <option value="MECH">MECH</option>
+	  <option value="EEE">EEE</option>
+	  <option value="CSE">CSE</option>
+	  <option value="MCA">MCA</option>
+	  <option value="CIVIL">CIVIL</option>
+	  <option value="CHEM">CHEM</option>
+ </select> 
+{{dep}}
+
+ <p *ngIf= dep>
+		Enter password for {{dep}} department:<br>
+		<input type="password" [(ngModel)]= "adminpass">
+
+		<button
+    class="btn btn-primary" 
+    (click)="doPasswordCheck()">Enter 
+</button>
+
+</p>
+{{ adminpass }}
+</div>
