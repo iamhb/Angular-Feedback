@@ -6,13 +6,13 @@
   </h1>
 
   <h3>
-  In app-main-component
+  In admin-module-component
 	</h3>
 
 <p *ngIf= !depFlag>
 	Select your department
 </p>
- <select [(ngModel)]= "dep" class="form-group"(click)="doPrint()" >
+ <select [(ngModel)]= "dep" class="form-group" (click)="doPrint()" >
 	  <option value="IT">IT</option>
 	  <option value="ECE">ECE</option>
 	  <option value="MECH">MECH</option>
@@ -24,7 +24,9 @@
  </select> 
 {{dep}}
 
- <p *ngIf= dep>
+</div>
+
+ <p *ngIf= dep  class="alert alert-info" >
 		Enter password for {{dep}} department:<br>
 		<input type="password" [(ngModel)]= "adminpass">
 
@@ -32,7 +34,5 @@
     class="btn btn-primary" 
     (click)="doPasswordCheck()">Enter 
 </button>
-
 </p>
 {{ adminpass }}
-</div>

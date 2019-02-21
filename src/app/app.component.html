@@ -7,31 +7,32 @@
   In app-main-component
 </h3>
 
-
 <!-- <a routerLink="/login-check" >
                Login-Check
           </a> <br>
  -->
-
 <p class="alert alert-info" *ngIf=studentNoteFlag>
     Login:<input type="text" [(ngModel)]= "userName">
+    <!-- check userName value for routing, 
+    if admin then route to admin-module,
+    else-if it is register number thyen route to question module -->
     <button
         class="btn btn-primary" 
+        [disabled]= !userName 
         (click)="doCheck()">Enter 
     </button> <br>
         ( Note: Students enter their Register Number )
 </p>
-{{userName}}
-
-  <h3 style="text-align:center">
+  {{userName}}
+ <!--  Routing done on manually by clicking on name, not programmaticaly
+ <h3 style="text-align:center">
         <a routerLink="/question-module" >
               Question-Module
         </a><br>
-
       <a routerLink="/admin-module" >
               Admin-Module
         </a><br>
-  </h3>
+  </h3> -->
 <hr>
 
 <router-outlet></router-outlet>

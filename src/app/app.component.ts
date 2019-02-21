@@ -13,18 +13,11 @@ export class AppComponent {
   title = 'Feedback-Angular';
   studentNoteFlag = true;
   userName='';
-
-
   doCheck(){
   	if(this.userName == 'admin')
   	{
   		this.studentNoteFlag = false;	
   		this.router.navigate(['/admin-module']);
   	}
-
-
-    
 }
-
-
 }

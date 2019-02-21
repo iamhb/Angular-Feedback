@@ -7,13 +7,19 @@ import { QuestionModuleComponent } from './question-module/question-module.compo
 import { AdminModuleComponent } from './admin-module/admin-module.component';
 import { AdminMenuComponent } from './admin-menu/admin-menu.component';
 
+import { SubjectMenuComponent } from './admin-menu/menu-options/subject-menu/subject-menu.component';
+import { FacultyMenuComponent } from './admin-menu/menu-options/faculty-menu/faculty-menu.component';
+
 
 const routes: Routes = [
 	{ path:'', redirectTo:'', pathMatch:'full' },
 	{ path:'login-check', component: LoginCheckComponent },
 	{ path: 'question-module', component: QuestionModuleComponent},
 	{ path: 'admin-module', component: AdminModuleComponent},
-	{ path: 'admin-menu', component: AdminMenuComponent}
+	{ path: 'admin-menu', component: AdminMenuComponent, children: [
+			{ path: 'subject', component: SubjectMenuComponent },
+			{ path: 'faculty', component: FacultyMenuComponent }
+	]}
 ];
 
 @NgModule({

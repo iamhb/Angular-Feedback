@@ -1,37 +1,69 @@
-
+<!-- 
+  In admin-menu-component
+  </h3>
+ <h3 style="text-align:center">
+       <a class="alert alert-info" routerLink="/admin-menu/subject" >
+              SubjectMenu
+        </a>
+      <a class="alert alert-info" routerLink="/admin-menu/faculty" >
+              FacultyMenu
+        </a><br>
+  -->
+<!DOCTYPE html>
+<html>
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
- --></head>
+  <title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+<div class="w3-bar w3-black">
+
+
+  <a href="#" class="w3-bar-item w3-button  "><i class="fa fa-home"></i>Home</a>
+ 
+
+ <div class="w3-dropdown-hover w3-mobile">
+      <button class="w3-button">Faculty</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="#" class="w3-bar-item w3-button">View Faculty</a>
+        <a href="#" class="w3-bar-item w3-button">Add Faculty</a>
+        <a href="#" class="w3-bar-item w3-button">Edit Faculty</a>
+         <a href="#" class="w3-bar-item w3-button">Delete Faculty</a>
+      </div>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
-  </div>
-</nav>
-  
-<div class="container">
-  <h3>Navbar With Dropdown</h3>
-  <p>This example adds a dropdown menu for the "Page 1" button in the navigation bar.</p>
-</div>
-</body>
+
+ 
+
+  <div class="w3-dropdown-hover w3-mobile">
+      <button class="w3-button">Subject</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="#" class="w3-bar-item w3-button">View Subject</a>
+        <a href="#" class="w3-bar-item w3-button">Add Subject</a>
+        <a href="#" class="w3-bar-item w3-button">Delete Subject</a>
+      </div>
+    </div>
+
+
+  <div class="w3-dropdown-hover w3-mobile">
+      <button class="w3-button">Section</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="#" class="w3-bar-item w3-button">Create Section</a>
+        <a href="#" class="w3-bar-item w3-button">Add Section</a>
+        <a href="#" class="w3-bar-item w3-button">View Section</a>
+      </div>
+    </div>
+
+
+ <div class="w3-dropdown-hover w3-mobile">
+      <button class="w3-button">Report</button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="#" class="w3-bar-item w3-button">Report Generation</a>
+        <a href="#" class="w3-bar-item w3-button">Clear Report</a>
+        
+      </div>
+    </div>
+
+<router-outlet></router-outlet>

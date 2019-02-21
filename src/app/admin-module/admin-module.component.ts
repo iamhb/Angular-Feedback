@@ -7,17 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-module.component.css']
 })
 export class AdminModuleComponent implements OnInit {
-
   constructor(private router: Router) { }
-
+  
   ngOnInit() {
   }
-
   dep='';
   enablePassword= false ;
   depFlag= false;
   adminpass='';
-  checktemp="hello";
 
   doPrint()
     {
@@ -31,11 +28,12 @@ export class AdminModuleComponent implements OnInit {
 
     doPasswordCheck()
     {
-    	this.router.navigate(['/admin-menu']);
-    /*	if(this.adminpass == "admin")
+    	
+    if(this.adminpass == "admin")
     	{
-    		alert( "Welcome "+ this.dep + " Admin" );
-    	}*/
+        this.router.navigate(['/admin-menu']);
+    		//alert( "Welcome "+ this.dep + " Admin" );
+    	}
     }
 
 }
